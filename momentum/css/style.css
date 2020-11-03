@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(11, 26, 15) 0 0 0.2rem;
+  transition: background-image 1s ease-in-out;
+}
+
+.day {
+  font-size: 2rem;
+}
+
+.time {
+  font-size: 4rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.btn {
+  margin-top: 0.5rem;
+  width: 10rem;
+  height: 2.5rem;
+  background-color: rgb(33, 212, 33);
+  color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: darkgreen;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.quote {
+  margin: 0;
+}
+
+.quote figcaption,
+.quote blockquote {
+  margin: 0.7rem;
+}
+
+.quote figcaption {
+  text-align: right;
+}
+
+.weather-icon {
+  font-size: 10rem;
+  color: #44aadd;
+}
+
+.weather-icon:hover {
+  animation: shake 2.5s;
+}
+
+.focus:hover,
+.name:hover,
+.city:hover {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: rgb(11, 26, 15);
+  border-radius: 0.5rem;
+  transition: background-color 1s;
+  transition: color 1s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .time {
+    font-size: 3rem;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+
+  .weather-icon {
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  .time {
+    font-size: 6rem;
+  }
+
+  body {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  .weather-icon {
+    font-size: 12rem;
+  }
+}
